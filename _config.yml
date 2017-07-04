@@ -1,14 +1,28 @@
 # Site settings
-# in the templates available like {{ site.myvariable }}.
-title: Clean portfolio theme for Jekyll powered by Bootstrap 4.
-email: your-email@domain.com
-brand: Ruifeng Hu
-headline: Inventor, Engineer and Futurist
-description: > # this means to ignore newlines until "baseurl:"
-  New Site
+# --- Serving options --- #
+
+# url is the full website URL
+# baseurl is the website's URL without the hostname
+
+url: "https://huruifeng.github.io/" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
-copyright: 2016 Whatever Company, Inc. All Rights Reserved.
+
+#relative_permalinks: false
+# If you are building a GitHub project page then use these settings:
+#url: "http://username.github.io/projectname"
+#baseurl: "/projectname"
+
+# Name of website
+title: Learning, Running, Travelling
+
+
+brand: Ruifeng Hu
+headline: Dedicated to Rigorous Science and Make a Better World
+
+# Short description of your site
+description: 
+
+copyright: Rufieng Hu  •  2017  •  huruifeng.github.io.
 
 # Build settings
 markdown: kramdown
@@ -17,9 +31,9 @@ markdown: kramdown
 snapwidget: 247552
 
 # Contacts
-email: your.name@gmail.com
-phone: +1-800-555-2016
+phone: +86-18500558121
+email: huruifeng.cn@hotmail.com
 
-# Tracking
-googleAnalitycsID: UA-83933844-1
+# Fill in your Google Analytics ID to track your website using GA
+googleAnalitycsID: UA-102009333-1
 
