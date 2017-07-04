@@ -878,7 +878,7 @@ button:focus{outline:none}
 .navbar .nav-item:hover{background:#fff}
 .navbar .nav-item:hover>.nav-link{color:#79AFE8}
 .navbar .nav-item .nav-link{color:#fff}
-@media (min-width: 992px){.navbar .nav-item .nav-link{font-size:1.2rem;line-height:0rem}
+@media (min-width: 992px){.navbar .nav-item .nav-link{font-size:1.2rem;line-height:2rem}
 }
 @media (min-width: 992px){.navbar-brand{font-size:2.0rem}
 }
