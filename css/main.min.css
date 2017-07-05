@@ -672,7 +672,7 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 .navbar-sticky-top{position:sticky;top:0;z-index:1030;width:100%}
 @media (min-width: 544px){.navbar-sticky-top{border-radius:0}
 }
-.navbar-brand{float:left;padding-left:3rem;padding-bottom:0rem;margin-right:1rem;font-size:1.25rem;line-height:1.2}
+.navbar-brand{float:left;padding-left:3rem;padding-bottom:0rem;margin-right:1rem;font-size:2rem;line-height:1.2}
 .navbar-brand:focus,.navbar-brand:hover{text-decoration:none}
 .navbar-brand>img{display:block}
 .navbar-divider{float:left;width:1px;padding-top:.425rem;padding-bottom:.425rem;margin-right:1rem;margin-left:1rem;overflow:hidden}
