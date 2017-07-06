@@ -162,8 +162,15 @@ div.content.b.intro {
 /* posts */
 
 div.posts div.end {
-  padding:40px;
+  padding:0px;
   text-align:center;
+}
+
+div.end{
+	width:98%;
+	height:15px;
+	padding-left:16px;
+	background-color:#79AFE8;
 }
 
 /* --------------------------------------------------------------------------------------------- */
