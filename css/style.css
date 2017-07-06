@@ -167,12 +167,12 @@ div.posts div.end {
 }
 
 div.end{
-	width:98%;
-	height:15px;
-	padding-left:16px;
+	width:96%;
+	height:40px;
+	padding-left:17px;
 	background-color:#79AFE8;
 	float:left;
-	font-size:16px;
+	font-size:30px;
 }
 
 /* --------------------------------------------------------------------------------------------- */
