@@ -233,7 +233,7 @@ a.post-excerpt {
       overflow-y: hidden;
       float:left;
       border:none;
-      margin-bottom:400px;
+      /*margin-bottom:400px;*/
       /*background:#ADD8E6;*/
 	  background:#79AFE8;
       /*-webkit-transform: translate3d(0,100px,0);*/
