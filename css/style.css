@@ -228,12 +228,12 @@ a.post-excerpt {
     a.post-excerpt {
       position:relative;
       display: block;
-      width:49%; /* 680/2 */
+      width:48%; /* 680/2 */
       height:120px;
       overflow-y: hidden;
       float:left;
       border:none;
-      /*margin-bottom:400px;*/
+      margin:1px;
       /*background:#ADD8E6;*/
 	  background:#79AFE8;
       /*-webkit-transform: translate3d(0,100px,0);*/
