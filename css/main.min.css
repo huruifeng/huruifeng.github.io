@@ -901,7 +901,7 @@ button:focus{outline:none}
 }
 .container-about{margin-top:1rem}
 .container-instagram{margin-top:1rem}
-.container-contacts{margin-top:2rem;padding-top:0rem;min-height:15rem;background:#EEE;color:#0e3054;border-top:solid 1px #ccc;}
+.container-contacts{margin-top:2rem;padding-top:1rem;min-height:15rem;background:#EEE;color:#0e3054;border-top:solid 1px #ccc;}
 .container-contacts-phone,.container-contacts-email{font-size:1.8rem;padding:1rem;border-radius:.25rem;background-color:#EEE;transition:background-color 0.3s ease}
 @media (min-width: 768px){.container-contacts-phone,.container-contacts-email{font-size:1.5rem}
 }
