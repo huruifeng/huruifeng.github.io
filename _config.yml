@@ -46,3 +46,6 @@ author:
   facebook : huruifeng
   linkedin : huruifeng
   SinaWB : hrflove99
+  
+permalink: /:year-:month-:day-:title/
+paginate: 30
