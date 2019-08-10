@@ -1,14 +1,50 @@
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li>
-</ul>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/TSEADB/index.jsp">TSEA-DB</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/TSEADB/index.jsp">Home</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Datasets <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/TSEADB/showPanelTrait.do?panel=MTC" >MTC</a></li>
+                <li><a href="/TSEADB/showPanelTrait.do?panel=UKBB">UKBB</a></li>
+                <li><a href="/TSEADB/page/UKBB1.jsp">UKBB-ICD10</a></li>
+                <li><a href="/TSEADB/showPanelTrait.do?panel=BSML">BSML</a></li>
+                <li><a href="/TSEADB/showTissue.do" >Tissue</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/TSEADB/page/browse.jsp">Browse</a></li>
+            <li><a href="/TSEADB/page/basicSearch.jsp">Search</a></li>
+            <li><a href="/TSEADB/page/traitCompareSelection.jsp">Compare</a></li>
+            <li><a href="/TSEADB/html/document.jsp">Documentation</a></li>
+            <li><a href="/TSEADB/html/contact.jsp">Contact</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <li ><a href="/TSEADB/html/updates.jsp">Updates <span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://github.com/bsml320/deTS" target="_blank">deTS</a></li>
+                <li><a href="https://www.uth.edu/bioinfo/index.htm" target="_blank">CPH</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
