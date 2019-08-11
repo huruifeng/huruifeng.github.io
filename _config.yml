@@ -46,6 +46,10 @@ author:
   facebook : huruifeng
   linkedin : huruifeng
   SinaWB : hrflove99
-  
-permalink: /:year-:month-:day-:title/
+
+#permalink: /:year-:month-:day-:title/
+permalink: /:title.html
 paginate: 30
+
+sass:
+  sass_dir: assets/css
