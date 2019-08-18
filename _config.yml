@@ -49,6 +49,9 @@ author:
 
 #permalink: /:year-:month-:day-:title/
 permalink: /:title.html
+
+plugins:
+  - jekyll-paginate
 paginate: 30
 
 sass:
