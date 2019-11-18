@@ -1,7 +1,7 @@
 .social a {
     color:black;
 }
-#experience,#education,#skills,#awards,#roles,#publication{
+#experience,#education,#skills,#awards,#roles,#publication,#conference{
     border-bottom:2px #c6c9cb solid!important;
     position:relative;
 }
