@@ -1,0 +1,80 @@
+{
+  "name": "Ruifeng Hu, Ph.D.",
+  "status": "Permanent resident",
+  "current_position": "Yale School of Medicine, Research Scientist (Research rank faculty)",
+  "contact": {
+    "phone": "1 (979) 264-7270",
+    "email": "huruifeng.cn@hotmail.com",
+    "github": "https://github.com/huruifeng"
+  },
+  "education": [
+    {
+      "degree": "Ph.D. Bioinformatics & Computational Biology",
+      "institution": "Peking Union Medical College & Chinese Academy of Medical Sciences, Tsinghua University",
+      "location": "Beijing, China",
+      "years": "2012.9 – 2017.7"
+    },
+    {
+      "degree": "B.Eng. Computer Science and Technology",
+      "institution": "College of Computer Science and Technology, Nanjing Forestry University",
+      "location": "Nanjing, China",
+      "years": "2008.9 – 2012.6"
+    }
+  ],
+  "skills": {
+    "focus": "Applying AI/ML and statistical methods to multi-modal data for biomarker/target identification and MoA insights",
+    "bioinformatics": [
+      "Multi-omics data analysis (RNASeq, genetics, CRISPR, spatial transcriptomics)",
+      "Machine learning & deep learning (CNN, RNN, VAE, Transformers)",
+      "Statistical modeling & pipeline development (Nextflow, Airflow, cloud/HPC)"
+    ],
+    "programming": ["Python", "C/C++", "Go", "R", "Linux shell"],
+    "web_dev": [
+      "FastAPI", "Flask", "Django", "React", "TailwindCSS", "Material UI"
+    ],
+    "data_resources": ["TCGA", "ENCODE", "DepMap", "GTEx", "CELLxGENE"],
+    "devops": ["GitHub", "Docker", "AWS", "GCP"],
+    "soft_skills": ["Mentoring", "Collaboration", "Project leadership"]
+  },
+  "experience": [
+    {
+      "role": "Research Scientist",
+      "institution": "Yale School of Medicine",
+      "years": "2024.10 – Present",
+      "responsibilities": [
+        "Developing ML/AI predictive models for cross-omics integration",
+        "Building automated bioinformatics pipelines for NGS datasets",
+        "Leading AI + Omics research club, mentoring junior researchers"
+      ]
+    },
+    {
+      "role": "Principal Scientist",
+      "institution": "Bristol Myers Squibb",
+      "years": "2023.6 – 2024.6",
+      "responsibilities": [
+        "Customized genomics foundation models (Geneformer, scGPT)",
+        "Multi-omics data analysis for drug targets/biomarker identification"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "ImmuneApp: an AI-driven tool for HLA-I epitope prediction",
+      "journal": "Nature Communication",
+      "year": "2024"
+    },
+    {
+      "title": "Prediction and characterization of T cell response specificity",
+      "journal": "Science Advances",
+      "year": "2024"
+    }
+  ],
+  "tools_developed": [
+    "ImmuneApp", "DeepTR", "WebCSEA", "Dr.VAEN", "KinaseMD", "DeepFun"
+  ],
+  "awards": [
+    "National Scholarship for Graduate Students (2016)",
+    "First Prize Scholarship for Academic Excellence (2014, 2015)",
+    "Outstanding Graduate Student (2014, 2015, 2016)"
+  ]
+}

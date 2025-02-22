@@ -1,48 +1,51 @@
-   <!-- JS -->
-
-   <footer style="height:100px">
-     <div class="container-fluid text-center" style="border-top:1px solid gray; width: 60%;">
-       <span class="black--text">©2019 — <strong>Ruifeng Hu</strong>
-       </span>
-     </div>
-     <div class="container text-center">
-	  <div class="social">
-	    <h4>
-          <a href="http://github.com/huruifeng" target="_blank"><i class="fab fa-github"></i></a>
-	      <a href="mailto:huruifeng.cn@hotmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-	      <a href="https://twitter.com/RuifengHu" target="_blank"><i class="fab fa-twitter"></i></a>
-	      <a href="https://www.linkedin.com/in/ruifeng-hu-702b9383" target="_blank"><i class="fab fa-linkedin"></i></a>
-	    </h4>
+<!-- Contact Footer -->
+<footer id="contact" class="border-t border-gray-200 dark:border-gray-800 py-12 px-4">
+  <div class="flex flex-col max-w-4xl mx-auto text-center items-center">
+    <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 section_title_font">Get in touch</h2>
+    <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
+    <img src="assets/image/divider.svg" class="w-96 h-full object-cover mb-4 mt-4" alt="">
+      <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
+          Have an interesting project? Let's connect!
+      </p>
+      <div class="flex flex-row">
+        <a href="mailto:huruifeng.cn@hotmail.com" class="inline-block border border-gray-300 dark:border-gray-600 mx-5 px-6 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            Send Email
+        </a>
+        <a href="https://www.linkedin.com/in/ruifeng-hu-702b9383/" class="inline-block border border-gray-300 dark:border-gray-600  mx-5 px-6 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            LinkedIn Message
+        </a>
     </div>
-   </footer>
+      <div class="mt-12 text-gray-500 text-sm">
+          <p>© 2023 Ruifeng Hu. All rights reserved.</p>
+      </div>
+  </div>
+</footer>
 
 
 
+  <!-- Scripts -->
+  <script>
+    // Theme toggle logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const html = document.documentElement;
 
-	</div>
-</section>
+    function toggleTheme() {
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
 
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (savedTheme === 'dark') html.classList.add('dark');
 
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script type="text/javascript">
+    // Add event listeners
+    themeToggle.addEventListener('click', toggleTheme);
+    mobileThemeToggle.addEventListener('click', toggleTheme);
 
-    function checkAndPositionFooter() {
-            var footer = $('footer');
-            footer.removeClass('fixed-bottom');
-            var contentHeight = document.body.scrollHeight;
-            var windowHeight = window.innerHeight;
-
-            if (contentHeight <= windowHeight) {
-                footer.addClass('fixed-bottom');
-            }
-        }
-
-        // reset the footer when initializing and resizing
-    $(function () {
-            checkAndPositionFooter();
-            $(window).resize(checkAndPositionFooter);
-        });
-   </script>
+    // Mobile menu toggle
+    document.querySelector('nav button').addEventListener('click', () => {
+        const menu = document.querySelector('#mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>

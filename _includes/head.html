@@ -1,15 +1,102 @@
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ site.brand }} - {{ site.title }}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
-    {% if site.meta_author %}
-    <meta name="author" content="{{ site.meta_author }}">
-    {% endif %}
-    <meta name="description" content="Ruifeng Hu, Ruifeng, PUMC, UTHealth,uthealth">
-    <meta name="keywords" content="Ruifeng Hu, Ruifeng, Hu Ruifeng, huruifeng, PUMC, UTHealth,uthealth">
-    <meta name="author" content="Ruifeng Hu">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+<!---================================================== -->
+<!-- basic page needs  -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ site.brand }} - {{ site.title }}</title>
+{% if site.meta_author %}
+<meta name="author" content="{{ site.meta_author }}">
+{% endif %}
+<meta name="author" content="">
+<meta name="title" content="Ruifeng Hu">
+<meta name="description" content="{{ site.description }}">
+<meta name="keywords" content="Ruifeng Hu, Ruifeng, Hu Ruifeng, huruifeng ">
+
+<!-- mobile specific metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS
+================================================== -->
+<!-- Initialize theme before loading Tailwind -->
+<script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
+
+<!-- Load Tailwind CSS -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+ <link href="../assets/css/tailwind.css" rel="stylesheet">
+
+<!-- Configure dark mode -->
+<script>
+    tailwind.config = {
+        darkMode: 'class'
+    }
+</script>
+
+<style>
+    /* Smooth transitions for theme changes */
+    body {
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<!-- favicons
+================================================== -->
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<link rel="icon" href="favicon.png" type="image/x-icon">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+    const navbarHeight = document.querySelector('nav').offsetHeight; // Get navbar height
+
+    // Smooth scroll handler
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            const targetPosition = targetSection.offsetTop - navbarHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Intersection Observer for active section
+    const observerOptions = {
+        root: null,
+        rootMargin: `-${navbarHeight}px 0px 0px 0px`,
+        threshold: 0.3
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-red-500');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('text-red-500');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+</script>
 

@@ -2,37 +2,581 @@
 layout: default
 title: index
 ---
-<div class="container" style="margin-top: 10em;">
-        <div class="text-center">
-            <div class="text-center">
-                <img src="assets/image/rhu_round.png" width="150" height="150" class="d-inline-block align-top" alt="">
+<!-- Hero Section -->
+<header id="home" class="min-h-screen flex items-center justify-center py-20 px-4 relative">
+    <div class="container max-w-4xl mx-auto text-center">
+        <div class="flex flex-col items-center justify-center mb-8">
+            <!-- Centered Image Container -->
+            <div class="w-96 h-96 rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-600 mb-4">
+                <img 
+                    src="assets/image/rhu_round.png" 
+                    class="w-full h-full object-cover" 
+                    alt="Profile Picture"
+                >
             </div>
-            <div class="text-center text-secondary font-italic">Be fortune, kind, and grateful</div>
-            <hr class="gray">
+            
+            <!-- Quote -->
+            <div class="text-gray-600 dark:text-gray-400 italic mb-4 text-xl">
+                "Be fortunate, kind, and grateful"
+            </div>
+            
+            <!-- Divider -->
+            <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
+            <img src="assets/image/divider2.gif" class="w-96 h-full object-cover" alt="">
         </div>
-        <div class="container black--text" id="indexbox">
-            <div>
-                <div class="tui-editor-contents">
-                    <p>
-                        I'm <code data-backticks="1">Ruifeng Hu, Ph.D.</code>, a computational biologist specializing in <code data-backticks="1">bioinformatics, machine learning, and multi-omics data analysis</code>.
-                         Currently, I work as a Research Scientist at Yale School of Medicine, applying advanced statistical and AI-driven approaches to decipher complex biological data for <code data-backticks="1">discovery, precision medicine, and disease modeling</code>.
+
+        <h2 class="text-5xl md:text-5xl font-bold mb-6 section_title_font">Ruifeng Hu (Ph.D.)</h2>
+        <p class="text-2xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 section_title_font">
+            I am a Computational Biologist and an AI/ML technology enthusiast. <br />
+            Let's connect and explore new possibilities in <strong>AI-driven bioinformatics</strong>! <br />🔬🤖✨
+        </p>
+        
+        <div class="flex justify-center space-x-6">
+            <a href="#about" class="inline-flex items-center border border-gray-300 dark:border-gray-600 rounded-lg px-6 py-2 
+                hover:bg-gray-100 dark:hover:bg-gray-800 
+                hover:text-blue-500 dark:hover:text-blue-400 
+                transition-colors duration-200">
+                More About Me
+            </a>
+            <a href="https://github.com/huruifeng" class="inline-flex items-center border border-gray-300 dark:border-gray-600 rounded-lg px-6 py-2 
+                hover:bg-gray-100 dark:hover:bg-gray-800 
+                hover:text-blue-500 dark:hover:text-blue-400 
+                transition-colors duration-200">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/ruifeng-hu-702b9383/" class="inline-flex items-center border border-gray-300 dark:border-gray-600 rounded-lg px-6 py-2 
+                hover:bg-gray-100 dark:hover:bg-gray-800 
+                hover:text-blue-500 dark:hover:text-blue-400 
+                transition-colors duration-200">
+                LinkedIn
+            </a>
+            <a href="notelist.html" class="inline-flex items-center border border-gray-300 dark:border-gray-600 rounded-lg px-6 py-2 
+                hover:bg-gray-100 dark:hover:bg-gray-800 
+                hover:text-blue-500 dark:hover:text-blue-400 
+                transition-colors duration-200">
+                My Notes
+            </a>
+        </div>
+
+       <!-- Add this inside your hero section container, after the social links -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+            <button onclick="scrollToContent('about')" class="group flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
+                <span class="text-sm font-medium">Scroll down</span>
+                <div class="relative -mr-1  animate-bounce">
+                    <svg class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+                    </svg>
+                </div>
+            </button>
+        </div>
+        <script>
+            function scrollToContent(target_id) {
+                document.querySelector('#'+target_id).scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            }
+        </script>
+
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
+    <div class="flex flex-col max-w-8xl mx-auto text-center items-center">
+        <h2 class="text-4xl font-bold mb-1 section_title_font">More About Me</h2>
+        <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
+        <img src="assets/image/divider.svg" class="w-96 h-full object-cover mb-4 mt-4" alt="">
+        <h3 class="text-2xl section_title_font ">I am a experienced Computational Biologist with a passion for AI/ML technologies.</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 max-w-6xl mx-auto text-left section_title_font">
+            <!-- Left Column -->
+            <div class="space-y-4">
+                <div class="space-y-2 text-xl">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Hello there!</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        I'm <span class="text-red-800">Ruifeng Hu, Ph.D.</span>, a computational biologist specializing in <span class="text-red-800">bioinformatics,  multi-omics data analysis and machine learning</span>.
+                        Currently, I work as a Research Scientist at Yale School of Medicine, applying advanced statistical and AI-driven approaches to decipher complex biological data for <span class="text-red-800">target discovery, precision medicine, and disease modeling</span>.
                     </p>
-         
-                    <p>I have rich experience in:</p>
-                    <ul>
-                        <li> <strong><code data-backticks="1">Multi-omics Data Analysis</code></strong>: Single-cell & bulk RNA-seq, spatial transcriptomics, CRISPR screens, genetics.
-                        <li> <strong><code data-backticks="1">Machine Learning & Deep Learning</code></strong>: Regression, clustering, generative models (VAE, LSTM, Transformer).
-                        <li> <strong><code data-backticks="1">Cloud & HPC Computing</code></strong>: Nextflow, Airflow, Docker, AWS, GCP, high-performance computing.
-                        <li> <strong><code data-backticks="1">Bioinformatics Pipelines & Web Development</code></strong>: Automated workflows and interactive genomic data platforms.
+
+                    <p>I actively contribute to <span class="text-red-800">open-source projects</span> and have developed various <span class="text-red-800">bioinformatics tools and databases</span>. 
+                        My research focuses on leveraging AI and data-driven methods to advance <span class="text-red-800">biomedical discoveries</span>.</p>
+                    <p>I thrive in <span class="text-red-800">collaborative environments</span>, working closely with <span class="text-red-800">wet lab scientists</span> and other researchers to <strong><span class="text-red-800">bridge the gap between computational and experimental biology</span></strong>. Always exploring the <strong><span class="text-red-800">cutting-edge AI applications in bioinformatics</span></strong>!</p>
+                </div>
+
+                <div class="space-y-2 text-lg">
+                    <!-- Add similar structure for other paragraphs -->
+                    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-200">I have rich experience in:</h4>
+                    <ul class="list-disc mt-0 pl-4" style="margin-top: 0;">
+                        <li> <strong><code class="text-red-800">Multi-omics Data Analysis</code></strong>: NGS, Single-cell & bulk RNA-seq, spatial transcriptomics, CRISPR screens, WGS, Genomics/Genetics.
+                        <li> <strong><code class="text-red-800">Machine Learning & Deep Learning</code></strong>: Regression, clustering, generative models (VAE, LSTM, Transformer).
+                        <li> <strong><code class="text-red-800">Pipeline, Cloud & HPC Computing</code></strong>: Nextflow, Airflow, Git, Docker, AWS, GCP, high-performance computing.
+                        <li> <strong><code class="text-red-800">Bioinformatics Pipelines & Web Development</code></strong>: Automated workflows and interactive genomic data platforms.
                     </ul>
-                   
+                </div>
+    
+            </div>
+        
+            <!-- Right Column - Skills -->
+            <div class="space-y-2">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                    I've got some skills. 
+                    <span class="text-sm text-gray-500 dark:text-gray-400">[Non-exhaustive]</span>
+                </h3>
+        
+                <!-- Skills Blocks -->
+                <div class="space-y-2">
+                    
+                    <!--Bioinfomatics skills -->
+                    <div class="space-y-2">
+                        <h4 class="text-md font-semibold text-gray-500 dark:text-gray-200">Bioinfomatics skills</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="label label-skill dark:text-gray-200">Multi-omics data analysis</span>
+                            <span class="label label-skill dark:text-gray-200">Functional (Epi)genomics</span>
+                            <span class="label label-skill dark:text-gray-200">Computational Genomics</span>
+                            <span class="label label-skill dark:text-gray-200">ML/DL</span>
+                            <span class="label label-skill dark:text-gray-200">Statistical modeling</span>
+                            <span class="label label-skill dark:text-gray-200">Analysis pipelines</span>
+                            <span class="label label-skill dark:text-gray-200">Programming expertise</span>
+                            <span class="label label-skill dark:text-gray-200">Bioinformatics tool & database development</span>
+                            <span class="label label-skill dark:text-gray-200">Web & API development</span>                          
+                            <span class="label label-skill dark:text-gray-200">Data visualization & dashboarding</span>                            
+                            <span class="label label-skill dark:text-gray-200">Biological insights interpretation and presentation</span>                
+                        </div>
+                    </div>
 
-                    <p>I actively contribute to <code data-backticks="1">open-source projects</code> and have developed various <code data-backticks="1">bioinformatics tools and databases</code>. 
-                        My research focuses on leveraging AI and data-driven methods to advance <code data-backticks="1">biomedical discoveries</code>.</p>
-                    <p>I thrive in <code data-backticks="1">collaborative environments</code>, working closely with <code data-backticks="1">wet lab scientists</code> and other researchers to <strong><code data-backticks="1">bridge the gap between computational and experimental biology</code></strong>. Always exploring the <strong><code data-backticks="1">cutting-edge AI applications in bioinformatics</code></strong>!</p>
+                    <!-- Programming Languages -->
+                    <div class="space-y-1">
+                        <h4 class="text-md font-semibold text-gray-500 dark:text-gray-200">Programming languages</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="label label-skill dark:text-gray-200">Python</span>
+                            <span class="label label-skill dark:text-gray-200">R</span>
+                            <span class="label label-skill dark:text-gray-200">C</span>
+                            <span class="label label-skill dark:text-gray-200">C++</span>
+                            <span class="label label-skill dark:text-gray-200">Java</span>
+                            <span class="label label-skill dark:text-gray-200">Go</span>
+                            <span class="label label-skill dark:text-gray-200">PHP</span>
+                            <span class="label label-skill dark:text-gray-200">JavaScript</span>                            
+                            <span class="label label-skill dark:text-gray-200">HTML/CSS</span>                            
+                            <span class="label label-skill dark:text-gray-200">Shell Scripts</span>                                
+                        </div>
+                    </div>
 
-                    <h5>Let's connect and explore new possibilities in **AI-driven bioinformatics**! 🔬🤖✨</h5>
+                    <!-- Framework & DevOps -->
+                    <div class="space-y-1">
+                        <h4 class="text-md font-semibold text-gray-500 dark:text-gray-200">Framework & DevOps</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="label label-skill dark:text-gray-200">React</span>
+                            <span class="label label-skill dark:text-gray-200">Express</span>
+                            <span class="label label-skill dark:text-gray-200">FastAPI</span>
+                            <span class="label label-skill dark:text-gray-200">Flask</span>
+                            <span class="label label-skill dark:text-gray-200">Django</span>
+                            <span class="label label-skill dark:text-gray-200">MySQL</span>
+                            <span class="label label-skill dark:text-gray-200">PostgreSQL</span>
+                            <span class="label label-skill dark:text-gray-200">MongoDB</span>
+                            <span class="label label-skill dark:text-gray-200">GitHub</span>                  
+                            <span class="label label-skill dark:text-gray-200">Docker</span>     
+
+
+                        </div>
+                    </div>
+
+                     <!-- Framework & DevOps -->
+                     <div class="space-y-2">
+                        <h4 class="text-md font-semibold text-gray-500 dark:text-gray-200">Data Ops & ML Ops</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="label label-skill dark:text-gray-200">Nextflow</span>
+                            <span class="label label-skill dark:text-gray-200">Airflow</span>
+                            <span class="label label-skill dark:text-gray-200">AWS/GCP</span>  
+                            <span class="label label-skill dark:text-gray-200">PyTorch</span>  
+                            <span class="label label-skill dark:text-gray-200">Keras</span>  
+                            <span class="label label-skill dark:text-gray-200">Tensorflow</span>  
+                            <span class="label label-skill dark:text-gray-200">scikit-learn</span>  
+                            <span class="label label-skill dark:text-gray-200">Pandas / NumPy / SciPy</span>  
+                            <span class="label label-skill dark:text-gray-200">Tidyverse / dplyr / tidyr / ggplot2</span>  
+                            <span class="label label-skill dark:text-gray-200">CNN / RNN / VAE / Transformer / LSTM / Attention models</span>  
+
+
+                        </div>
+                    </div>
+        
+                    <!-- Other -->
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-semibold text-gray-500 dark:text-gray-200">Others</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="label label-skill dark:text-gray-200">Cross-functional communication and collaboration</span>
+                            <span class="label label-skill dark:text-gray-200">Mentoring</span>
+                            <span class="label label-skill dark:text-gray-200">Project leadership</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-</div>
+    </div>
+    <div class="max-w-8xl mx-auto px-4 text-center">
+        <div class="inline-flex flex-col space-y-4 w-full max-w-6xl">
+            <!-- JSON Resume Button -->
+            <a href="assets/CV/CV_RuifengHu.json" 
+               target="_blank"
+               class="w-full py-3 px-6 bg-gray-500 text-white  font-medium text-center
+                      hover:bg-gray-700 transition-colors duration-200
+                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Download my JSON Resume
+            </a>
+    
+            <!-- PDF CV Button -->
+            <a href="assets/CV/CV_RuifengHu_1224Y2.pdf" 
+               target="_blank"
+               class="w-full py-3 px-6 border-2 border-gray-300 dark:border-gray-600 
+                      text-gray-900 dark:text-gray-100 font-medium text-center
+                      hover:bg-gray-300 dark:hover:bg-gray-900 transition-colors duration-200
+                      focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                Download My PDF CV
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 px-4">
+    <div class="flex flex-col max-w-8xl mx-auto text-center items-center">
+        <h2 class="text-4xl font-bold section_title_font">Some of My Projects</h2>
+        <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
+        <img src="assets/image/divider.svg" class="w-96 h-full object-cover mb-4 mt-4" alt="">
+
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project Card 1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">ImmuneApp</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">an AI-driven tool for HLA-I epitope prediction and interpretable clinical immunopeptidome analysis.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#Python</div>
+                    <div class="text-sm text-blue-400">#Immunopeptidome</div>
+                    <div class="text-sm text-blue-400">#HLA-I epitope</div>
+                    <div class="text-sm text-blue-400">#BiLSTM</div>
+                    <div class="text-sm text-blue-400">#Attention layer</div>
+                    <div class="text-sm text-blue-400">#HTML/JS/CSS</div>
+                </div>
+                
+                <a href="https://bioinfo.uth.edu/iapp" class="inline-flex items-center hover:text-blue-400 transition-colors">
+                    Visit →
+                </a>
+                <a href="https://www.nature.com/articles/s41467-024-53296-0" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
+                    Read Publication →
+                </a>
+                
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">DeepTR</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">Prediction and characterization of T cell response specificity by deep learning.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#Python</div>
+                    <div class="text-sm text-blue-400">#T cell response</div>
+                    <div class="text-sm text-blue-400">#VAE</div>
+                    <div class="text-sm text-blue-400">#LSTM</div>
+                    <div class="text-sm text-blue-400">#HTML/JS/CSS</div>
+                </div>
+                <a href="https://bioinfo.uth.edu/DeepTR" class="inline-flex items-center hover:text-blue-400 transition-colors">
+                    Visit →
+                </a>
+                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4565234" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
+                    Read Publication →
+                </a>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">Dr.VAEN:</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">Drug response prediction using Variational Autoencoder based Elastic Net models.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#Python</div>
+                    <div class="text-sm text-blue-400">#Drug response</div>
+                    <div class="text-sm text-blue-400">#VAE:Variational Autoencoder </div>
+                    <div class="text-sm text-blue-400">#ElasticNet regression</div>
+                    <div class="text-sm text-blue-400">#HTML/JS/CSS</div>
+                </div>
+                
+                <a href="https://bioinfo.uth.edu/drvaen" class="inline-flex items-center hover:text-blue-400 transition-colors">
+                    Visit →
+                </a>
+                <a href="https://www.nature.com/articles/s41467-021-21997-5" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
+                    Read Publication →
+                </a>
+                
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">MitoX</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">exploring mitochondrial heteroplasmy and gene expression from single-cell sequencing assays.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#Single cell</div>
+                    <div class="text-sm text-blue-400">#Mitochondrial </div>
+                    <div class="text-sm text-blue-400">#Python</div>
+                </div>
+                <a href="https://github.com/huruifeng/MitoX" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
+                    View Codes →
+                </a>
+                
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">BrainDataPortal</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">The brain omics data analysis and visualization platform:scRNAseq, scATACseq, ChIPseq, Spatial Transcriptomics, WGS and other omics data.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#React</div>
+                    <div class="text-sm text-blue-400">#Vite</div>
+                    <div class="text-sm text-blue-400">#FastAPI</div>
+                    <div class="text-sm text-blue-400">#PostgreSQL</div>
+                </div>
+                <a href="https://github.com/huruifeng/BrainDataPortal" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
+                    View Codes →
+                </a>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">scRNA_Nextflow</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">Nextflow pipeline for single-cell RNAseq data analysis</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#Nextflow</div>
+                    <div class="text-sm text-blue-400">#Single cell</div>
+                    <div class="text-sm text-blue-400">#scRNAseq</div>
+                </div>
+                
+                <a href=https://github.com/huruifeng/scRNA_Nextflow" class="inline-flex items-center hover:text-blue-400 transition-colors">
+                    View Codes →
+                </a>
+                
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">PDTrans</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">Predict future UPDRS III trends in Parkinson's Disease using transformer.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#Python</div>
+                    <div class="text-sm text-blue-400">#Transfromer</div>
+                    <div class="text-sm text-blue-400">#Parkinson's Disease</div>
+                    <div class="text-sm text-blue-400">#AI</div>
+                </div>
+                
+                <a href=https://github.com/huruifeng/PDTrans" class="inline-flex items-center hover:text-blue-400 transition-colors">
+                    View Codes →
+                </a>
+                
+            </div>
+
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">CSDAV</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">CRISPR Screen Data Analysis and Visualization.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#R</div>
+                    <div class="text-sm text-blue-400">#R Shiny</div>
+                    <div class="text-sm text-blue-400">#WG CRISPR Screen</div>
+                </div>
+                
+                <a href=https://github.com/huruifeng/PDTrans" class="inline-flex items-center hover:text-blue-400 transition-colors">
+                    View Codes →
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    <div class="max-w-8xl mx-auto px-4 text-center mt-20">
+        <div class="inline-flex flex-col space-y-4 w-full max-w-6xl">
+            <!-- JSON Resume Button -->
+            <a href="https://github.com/huruifeng" 
+               target="_blank"
+               class="w-full py-3 px-6 bg-gray-500 text-white  font-medium text-center
+                      hover:bg-gray-700 transition-colors duration-200
+                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Visit my GitHub for More ...
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-16 bg-gray-50 dark:bg-gray-900">
+    <div class="flex flex-col max-w-6xl mx-auto items-center">
+        <div class="text-center mb-12 items-center">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 section_title_font">My Work Experience</h2>
+            <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
+            <img src="assets/image/divider.svg" class="w-96 h-full object-cover mb-4 mt-4" alt="">
+        </div>
+
+        <div class="relative">
+            <!-- Timeline line -->
+            <div class="absolute left-3 top-0 w-0.5 h-full bg-gray-200 dark:bg-gray-700"></div>
+
+            <!-- Timeline items -->
+            <div class="space-y-8 ml-12">
+                <!-- Timeline Item 1 -->
+                <div class="relative">
+                    <div class="absolute -left-12 top-4 w-6 h-6 bg-gray-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+                    
+                    <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <span class="text-sm text-gray-600 dark:text-gray-400">October 2024 - Present</span>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-1">Yale School of Medicine, New Haven, CT </h3>
+                            <h4 class="text-gray-600 dark:text-gray-300 font-medium">Research Scientist, Research rank faculty</h4>
+                        </div>
+                        <ul class="text-gray-600 dark:text-gray-300 list-disc pl-4 space-y-2">
+                            <li>
+                                In summary: working as an advanced member of a research group. 
+                                I focus on several projects in supporting of the PI, my responsibilities involve the combination of project management, 
+                                research execution, data and pipeline management, research staff/trainee training and supervision, 
+                                leading or assisting in the development of papers for publication and conference presentations, 
+                                and supporting the preparation of grant applications and reports to funding agencies.
+                            </li>
+                            <li>
+                                Developing automated, efficient internal data analysis pipelines for standard NGS datasets, 
+                                including genomics, transcriptomics, epigenomics, proteomics, etc. at bulk, single-cell or spatial level. 
+                                (Include setting up cross-cohort data Q/C, data harmonization, and result reporting, maintaining the codes via GitHub/Docker with well-documented README as well as developing or adapting novel algorithms, statistical modeling, 
+                                and workflow to support customized data analysis. Nextflow and Airflow were mainly used.)
+                            </li>
+                            <li>
+                                Creating exploratory data portal platform for data deposit, data management and building intuitive visualization and querying of relationships across data modalities; 
+                                Providing strategic solution to accelerate the store/read ST and SC data to/from database.
+                            </li>
+                            <li>
+                                Communicating with other parties in projects (incl. wet lab, sequencing core, study coordinator, other data scientist, and PIs etc.). Creating the standard / SOP of data management, data delivery, QC merit and reporting.
+                            </li>
+                            <li>
+                                Other research activities: Assisting the PI to provide basic and advanced bioinformatics training to the junior members in the team; 
+                                Establishing the lab GitHub with curated core compute pipelines and maintaining the bioinformatics resources; 
+                                Managing the lab server or HPC storage space and developing strategic plan to fulfill the lab computational needs. 
+                                Drafting of the research plan, writing of research SOPs, application and renewal of grants. 
+                                Staying current with advancements in the field to incorporate emerging technologies. 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative">
+                    <div class="absolute -left-12 top-4 w-6 h-6 bg-gray-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+                    <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <span class="text-sm text-gray-600 dark:text-gray-400">June 2023 - June 2024</span>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-1">Bristol Myers Squibb, Cambridge, MA</h3>
+                            <h4 class="text-gray-600 dark:text-gray-300 font-medium">Principal Scientist, Computational Reverse Translation</h4>
+                        </div>
+                        <ul class="text-gray-600 dark:text-gray-300 pl-4 list-disc space-y-2">
+                            <li>Lead the project of utilizing/customizing/training genomics foundation models (e.g., Geneformer, scGPT) to decipher the genomics data, and map patient samples to reductionist models.</li>
+                            <li>Analyze multi-omics (e.g., bulk/scRNAseq, Spatial transcriptomics) data for potential drug targets/biomarkers identification from PDAC, NSCLC patient and model samples.</li>
+                            <li>Involved in the development of the spatial data portal framework which can help biologists to browse and visualize analyzed results.  </li>
+                            <li>Whole-genome CRISPR data analysis to find the vulnerability genes of cancer cell lines under conditions.</li>
+                            <li>Collaboration with the MoCR TRC (Mechanisms of Cancer Resistance Thematic Research Center) teams on lung cancer R&D.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <!-- Timeline Item 3 -->
+                 <div class="relative">
+                    <div class="absolute -left-12 top-4 w-6 h-6 bg-gray-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+                    <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <span class="text-sm text-gray-600 dark:text-gray-400">March 2021 - June 2023</span>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-1">Harvard Medical School - BWH, Boston, MA</h3>
+                            <h4 class="text-gray-600 dark:text-gray-300 font-medium">Senior Research Associate </h4>
+                        </div>
+                        <ul class="text-gray-600 dark:text-gray-300 pl-4 list-disc space-y-2">
+                            <li>Lead the project of discovering and replicating the differentially expressed genes from RNAseq data analysis to find potential diagnosis biomarkers in PPMI and PDBP cohorts.</li>
+                            <li>Build classification models for prediction of the Parkinson’s Disease status utilizing the multi-omics data (transcriptomics, genetics, and clinical data)</li>
+                            <li>Investigation of advanced machine learning/deep learning models (Autoencoder, DNN, LSTM, Transformer) for Parkinson’s Disease status prediction and UPDRS regression.</li>
+                             <li>Analysis of RNAseq data obtained from a time-series experimental design to find the potential diagnosis biomarkers for PD patients at different development stages.</li>
+                            <li>Build scRNAseq data analysis pipeline using Nextflow, and analyze the scRNAseq data for PD organoid samples</li>
+                            <li>Others: Running jobs on HPC with LSF, Slurm; Internal Linux server management.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                 <!-- Timeline Item 4 -->
+                 <div class="relative">
+                    <div class="absolute -left-12 top-4 w-6 h-6 bg-gray-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+                    <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <span class="text-sm text-gray-600 dark:text-gray-400">October 2017 - March 2021</span>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-1">School of Biomedical Informatics, UT Health Science Center, Houston, TX</h3>
+                            <h4 class="text-gray-600 dark:text-gray-300 font-medium">Postdoctoral Research Fellow</h4>
+                        </div>
+                        <ul class="text-gray-600 dark:text-gray-300 pl-4 list-disc space-y-2">
+                            <li>Develop, implement, and maintain next-generation sequencing (NGS) data processing pipelines or modules to perform standard data analysis in an automated fashion for researchers and clinicians to explore the results. (TCGA cancer RNAseq/mutation data analysis, survival analysis, et.al)</li>
+                            <li>Development of novel computational methods/solutions for biomedical problems utilizing machine learning and deep learning models. (Drug response prediction, HLA-antigen prediction, Mutation effects, et.al)</li>
+                            <li>Constructions of biomedical knowledgebases and web servers for research communities (Mutation-drug response database, Cell-type enrichment analysis web server, et.al).</li>
+                            <li>Implement sequence-based models for exploring biological insights (Finding sequence motifs, et.al)</li>
+                            <li>Mentor or train junior investigators in the Center for Precision Health.</li>
+                            <li>Others: collaborate with wet labs and clinicians to provide technical expertise to lead in the development of study design, sample or data collection, pipeline development, data analysis, results interpretation, manuscript writing, and grant proposal preparation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Add other timeline items following the same pattern -->
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="py-16 bg-white dark:bg-gray-900">
+    <div class="flex flex-col mx-auto max-w-6xl px-4 items-center">
+        <div class="text-center mb-12 items-center">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 section_title_font">My Education</h2>
+            <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
+            <img src="assets/image/divider.svg" class="w-96 h-full object-cover mb-4 mt-4" alt="">
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Left Column -->
+            <div class="relative">
+                <div class="absolute left-3 top-0 w-0.5 h-full bg-gray-200 dark:bg-gray-700"></div>
+                
+                <div class="space-y-8 ml-12">
+                    <!-- Education Item 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-12 top-4 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+                        <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <span class="text-sm text-gray-600 dark:text-gray-400">2012 - 2017</span>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-2"> Ph.D. Bioinformatics & Computational Biology </h3>
+                            <h4 class="text-gray-600 dark:text-gray-300 font-medium">Peking Union Medical College & Chinese Academy of Medical Sciences, Tsinghua University</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 mt-2 pl-4 list-disc space-y-4">
+                                <li>National Scholarship for Graduate Students, from Chinese Ministry of Education and Ministry of Finance (CAMS&PUMC) (the highest scholarship for graduate students) - 2016</li>
+                                <li>First Prize Scholarship for Academic Excellence (CAMS&PUMC) - 2014, 2015</li>
+                                <li>Outstanding Graduate Students of PUMC - 2014, 2015,2016</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="relative">
+                <div class="absolute left-3 top-0 w-0.5 h-full bg-gray-200 dark:bg-gray-700"></div>
+                
+                <div class="space-y-8 ml-12">
+                    <!-- Education Item 3 -->
+                    <div class="relative">
+                        <div class="absolute -left-12 top-4 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+                        <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <span class="text-sm text-gray-600 dark:text-gray-400">2008 - 2012</span>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-2">B.Eng. Computer Science and Technology</h3>
+                            <h4 class="text-gray-600 dark:text-gray-300 font-medium">College of Computer Science and Technology, Nanjing Forestry University</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 mt-2 pl-4 space-y-4 list-disc">
+                                <li>National Scholarship for Undergraduate Students, from Chinese Ministry of Education and Ministry of Finance (NJFU) (the highest scholarship for undergraduate students) - 2009</li>
+                                <li>The First Prize Scholarship of Nanjing Forestry University - 2010, 2011</li>
+                                <li>Outstanding Undergraduates of NJFU - 2012</li>
+                                <li>Merit Student of Nanjing Forestry University, China (For three consecutive years) - 2009, 2010, 2011</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

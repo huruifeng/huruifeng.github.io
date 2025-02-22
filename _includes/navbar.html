@@ -1,38 +1,60 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="assets/image/rhu_round.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      Ruifeng Hu
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!-- header
+================================================== -->
+ <!-- Navigation -->
+<nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50">
+    <div class="container max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center gap-1">
+                <img class="size-8 rounded-full" src="../assets/image/rhu_round.png" alt="">
+                <a href="index.html" class="section_title_font text-2xl font-semibold hover:text-blue-400 transition-colors">
+                    Ruifeng Hu
+                </a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                    </svg>
+                    <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                    </svg>
+                </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cv.html">CV</a>
-        </li><li class="nav-item">
-          <a class="nav-link" href="notelist.html">Notes</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Others
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Food</a>
-            <a class="dropdown-item" href="#">Photo</a>
-            <a class="dropdown-item" href="#">Movie</a>
-            <a class="dropdown-item" href="#">Life</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Links</a>
-        </li>
-      </ul>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6 font-mono">
+                    <a href="#home" class="hover:text-blue-400 transition-colors">HOME</a>
+                    <a href="#about" class="hover:text-blue-400 transition-colors">ABOUT</a>
+                    <a href="#projects" class="hover:text-blue-400 transition-colors">PROJECTS</a>
+                    <a href="#experience" class="hover:text-blue-400 transition-colors">EXPERIENCE</a>
+                    <a href="#education" class="hover:text-blue-400 transition-colors">EDUCATION</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">CONTACT</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 hover:text-blue-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
 </nav>
+ <!-- Mobile Menu -->
+ <div id="mobile-menu" class="md:hidden fixed w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm hidden">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-4 text-center font-mono">
+            <a href="#" class="hover:text-blue-400 transition-colors">HOME</a>
+            <a href="#about" class="py-2 hover:text-blue-400">ABOUT</a>
+            <a href="#projects" class="py-2 hover:text-blue-400">PROJECTS</a>
+            <a href="#experience" class="py-2 hover:text-blue-400">EXPERIENCE</a>
+            <a href="#EDUCATION" class="py-2 hover:text-blue-400">EDUCATION</a>
+            <a href="#contact" class="py-2 hover:text-blue-400">CONTACT</a>
+            <button id="mobile-theme-toggle" class="py-2 hover:text-blue-400">
+                Toggle Theme
+            </button>
+        </div>
+    </div>
+</div>
