@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark" >
     <head>
         <!---================================================== -->
 <!-- basic page needs  -->
@@ -26,17 +26,15 @@
         document.documentElement.classList.remove('dark')
     }
 </script>
-
 <!-- Load Tailwind CSS -->
-<!-- <script src="https://cdn.tailwindcss.com"></script> -->
- <link href="../assets/css/tailwind.css" rel="stylesheet">
-
+<script src="https://cdn.tailwindcss.com"></script>
 <!-- Configure dark mode -->
 <script>
     tailwind.config = {
         darkMode: 'class'
     }
 </script>
+
 
 <style>
     /* Smooth transitions for theme changes */
@@ -130,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-6 font-mono">
-                    <a href="#home" class="hover:text-blue-400 transition-colors">HOME</a>
+                    <a href="index.html#home" class="hover:text-blue-400 transition-colors">HOME</a>
                     <a href="#about" class="hover:text-blue-400 transition-colors">ABOUT</a>
                     <a href="#projects" class="hover:text-blue-400 transition-colors">PROJECTS</a>
                     <a href="#experience" class="hover:text-blue-400 transition-colors">EXPERIENCE</a>
@@ -216,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <a href="notelist.html" class="inline-flex items-center border border-gray-300 dark:border-gray-600 rounded-lg px-6 py-2 
                 hover:bg-gray-100 dark:hover:bg-gray-800 
                 hover:text-blue-500 dark:hover:text-blue-400 
-                transition-colors duration-200">
+                transition-colors duration-200" target="_blank">
                 My Notes
             </a>
         </div>

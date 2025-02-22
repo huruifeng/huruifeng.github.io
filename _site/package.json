@@ -1,6 +1,10 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.0.8",
-    "tailwindcss": "^4.0.8"
+  "scripts": {
+    "dev": "npx tailwindcss -i ./assets/css/tailwind.css -o ./_site/assets/css/tailwind.css --watch",
+    "build": "JEKYLL_ENV=production bundle exec jekyll build && npx tailwindcss -i ./assets/css/tailwind.css -o ./_site/assets/css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3",
+    "@tailwindcss/typography": "^0.5.13"
   }
 }
