@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden p-2 hover:text-blue-400">
+                <button class="md:hidden p-2 hover:text-blue-400" id="mobile-menu-button">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -149,17 +149,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </nav>
  <!-- Mobile Menu -->
  <div id="mobile-menu" class="md:hidden fixed w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm hidden">
-    <div class="container mx-auto px-4 py-4">
+    <div class="container mx-auto px-4 py-4 pt-20 z-50">
         <div class="flex flex-col space-y-4 text-center font-mono">
-            <a href="#" class="hover:text-blue-400 transition-colors">HOME</a>
-            <a href="#about" class="py-2 hover:text-blue-400">ABOUT</a>
-            <a href="#projects" class="py-2 hover:text-blue-400">PROJECTS</a>
-            <a href="#experience" class="py-2 hover:text-blue-400">EXPERIENCE</a>
-            <a href="#EDUCATION" class="py-2 hover:text-blue-400">EDUCATION</a>
-            <a href="#contact" class="py-2 hover:text-blue-400">CONTACT</a>
-            <button id="mobile-theme-toggle" class="py-2 hover:text-blue-400">
-                Toggle Theme
-            </button>
+            <a href="index.html" class="hover:text-blue-400 transition-colors">HOME</a>
+            <a href="index.html#about" class="py-2 hover:text-blue-400">ABOUT</a>
+            <a href="index.html#projects" class="py-2 hover:text-blue-400">PROJECTS</a>
+            <a href="index.html#experience" class="py-2 hover:text-blue-400">EXPERIENCE</a>
+            <a href="index.html#education" class="py-2 hover:text-blue-400">EDUCATION</a>
+            <a href="index.html#contact" class="py-2 hover:text-blue-400">CONTACT</a>
         </div>
     </div>
 </div>
@@ -418,7 +415,6 @@ document.addEventListener('DOMContentLoaded', function() {
   <script>
     // Theme toggle logic
     const themeToggle = document.getElementById('theme-toggle');
-    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
     const html = document.documentElement;
 
     function toggleTheme() {
@@ -432,13 +428,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listeners
     themeToggle.addEventListener('click', toggleTheme);
-    mobileThemeToggle.addEventListener('click', toggleTheme);
 
-    // Mobile menu toggle
-    document.querySelector('nav button').addEventListener('click', () => {
-        const menu = document.querySelector('#mobile-menu');
-        menu.classList.toggle('hidden');
-    });
+     // Function to handle mobile menu
+     function setupMobileMenu() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    setupMobileMenu();
 </script>
     </body>
 </html>

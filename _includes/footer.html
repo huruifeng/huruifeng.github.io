@@ -27,7 +27,6 @@
   <script>
     // Theme toggle logic
     const themeToggle = document.getElementById('theme-toggle');
-    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
     const html = document.documentElement;
 
     function toggleTheme() {
@@ -41,11 +40,15 @@
 
     // Add event listeners
     themeToggle.addEventListener('click', toggleTheme);
-    mobileThemeToggle.addEventListener('click', toggleTheme);
 
-    // Mobile menu toggle
-    document.querySelector('nav button').addEventListener('click', () => {
-        const menu = document.querySelector('#mobile-menu');
-        menu.classList.toggle('hidden');
-    });
+     // Function to handle mobile menu
+     function setupMobileMenu() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    setupMobileMenu();
 </script>
