@@ -5,7 +5,7 @@
 <!-- basic page needs  -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Ruifeng Hu - Learning, Running, Travelling</title>
+<title>Ruifeng Hu - index</title>
 
 <meta name="author" content="">
 <meta name="title" content="Ruifeng Hu">
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll handler
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
+            // e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             const targetPosition = targetSection.offsetTop - navbarHeight;
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ================================================== -->
  <!-- Navigation -->
 <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50">
-    <div class="container max-w-6xl mx-auto px-4">
+    <div class="container max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16">
             <div class="flex items-center gap-1">
                 <img class="size-8 rounded-full" src="../assets/image/rhu_round.png" alt="">
@@ -129,11 +129,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-6 font-mono">
                     <a href="index.html#home" class="hover:text-blue-400 transition-colors">HOME</a>
-                    <a href="#about" class="hover:text-blue-400 transition-colors">ABOUT</a>
-                    <a href="#projects" class="hover:text-blue-400 transition-colors">PROJECTS</a>
-                    <a href="#experience" class="hover:text-blue-400 transition-colors">EXPERIENCE</a>
-                    <a href="#education" class="hover:text-blue-400 transition-colors">EDUCATION</a>
-                    <a href="#contact" class="hover:text-blue-400 transition-colors">CONTACT</a>
+                    <a href="index.html#about" class="hover:text-blue-400 transition-colors">ABOUT</a>
+                    <a href="index.html#projects" class="hover:text-blue-400 transition-colors">PROJECTS</a>
+                    <a href="index.html#experience" class="hover:text-blue-400 transition-colors">EXPERIENCE</a>
+                    <a href="index.html#education" class="hover:text-blue-400 transition-colors">EDUCATION</a>
+                    <a href="notelist.html" class="hover:text-blue-400 transition-colors">MyNOTEs</a>
+                    <a href="index.html#contact" class="hover:text-blue-400 transition-colors">CONTACT</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -243,12 +244,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- About Section -->
 <section id="about" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
-    <div class="flex flex-col max-w-8xl mx-auto text-center items-center">
+    <div class="flex flex-col max-w-7xl mx-auto text-center items-center">
         <h2 class="text-4xl font-bold mb-1 section_title_font">More About Me</h2>
         <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
         <img src="assets/image/divider.svg" class="w-96 h-full object-cover mb-4 mt-4" alt="">
-        <h3 class="text-2xl section_title_font ">I am a experienced Computational Biologist with a passion for AI/ML technologies.</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 max-w-6xl mx-auto text-left section_title_font">
+        <h3 class="text-2xl section_title_font ">I am an experienced Computational Biologist with a passion for AI/ML technologies.</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 max-w-7xl mx-auto text-left section_title_font">
             <!-- Left Column -->
             <div class="space-y-4">
                 <div class="space-y-2 text-xl">
@@ -291,6 +292,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         <h4 class="text-md font-semibold text-gray-500 dark:text-gray-200">Bioinfomatics skills</h4>
                         <div class="flex flex-wrap gap-2">
                             <span class="label label-skill dark:text-gray-200">Multi-omics data analysis</span>
+                            <span class="label label-skill dark:text-gray-200">bulk & scRNAseq, scATACseq</span>
+                            <span class="label label-skill dark:text-gray-200">Spatial transcriptomics/Visium/MERFISH</span>
+                            <span class="label label-skill dark:text-gray-200">WGS</span>
+                            <span class="label label-skill dark:text-gray-200">WG CRISPR screen data</span>
                             <span class="label label-skill dark:text-gray-200">Functional (Epi)genomics</span>
                             <span class="label label-skill dark:text-gray-200">Computational Genomics</span>
                             <span class="label label-skill dark:text-gray-200">ML/DL</span>
@@ -372,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    <div class="max-w-8xl mx-auto px-4 text-center">
+    <div class="max-w-7xl mx-auto px-4 text-center">
         <div class="inline-flex flex-col space-y-4 w-full max-w-6xl">
             <!-- JSON Resume Button -->
             <a href="assets/CV/CV_RuifengHu.json" 
@@ -399,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- Projects Section -->
 <section id="projects" class="py-20 px-4">
-    <div class="flex flex-col max-w-8xl mx-auto text-center items-center">
+    <div class="flex flex-col max-w-7xl mx-auto text-center items-center">
         <h2 class="text-4xl font-bold section_title_font">Some of My Projects</h2>
         <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
         <img src="assets/image/divider.svg" class="w-96 h-full object-cover mb-4 mt-4" alt="">
@@ -430,22 +435,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <!-- Project Card 2 -->
             <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
-                <h3 class="text-xl font-semibold mb-4">DeepTR</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Prediction and characterization of T cell response specificity by deep learning.</p>
+                <h3 class="text-xl font-semibold mb-4">VisiumST Images Crop </h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">VisiumST Dot Frame Detection and Cropping</p>
                 <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
                     <div class="text-sm text-blue-400">#Python</div>
-                    <div class="text-sm text-blue-400">#T cell response</div>
-                    <div class="text-sm text-blue-400">#VAE</div>
-                    <div class="text-sm text-blue-400">#LSTM</div>
-                    <div class="text-sm text-blue-400">#HTML/JS/CSS</div>
+                    <div class="text-sm text-blue-400">#Visium Spatial Transcriptomics</div>
+                    <div class="text-sm text-blue-400">#Image processing</div>
+                    <div class="text-sm text-blue-400">#Data visualization</div>
                 </div>
-                <a href="https://bioinfo.uth.edu/DeepTR" class="inline-flex items-center hover:text-blue-400 transition-colors">
+                <a href="https://github.com/huruifeng/VisiumSTCrop" class="inline-flex items-center hover:text-blue-400 transition-colors">
                     Visit →
                 </a>
-                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4565234" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
-                    Read Publication →
+                <a href="https://github.com/huruifeng/SCST_Data" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
+                    Single cell / Spatial transcriptomics data processing →
                 </a>
             </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+                <h3 class="text-xl font-semibold mb-4">BrainDataPortal</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">The brain omics data analysis and visualization platform:scRNAseq, scATACseq, ChIPseq, Spatial Transcriptomics, WGS and other omics data.</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
+                    <div class="text-sm text-blue-400">#React</div>
+                    <div class="text-sm text-blue-400">#Vite</div>
+                    <div class="text-sm text-blue-400">#FastAPI</div>
+                    <div class="text-sm text-blue-400">#PostgreSQL</div>
+                </div>
+                <a href="https://github.com/huruifeng/BrainDataPortal" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
+                    View Codes →
+                </a>
+            </div>
+
 
             <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
                 <h3 class="text-xl font-semibold mb-4">Dr.VAEN:</h3>
@@ -479,20 +498,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     View Codes →
                 </a>
                 
-            </div>
-
-            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
-                <h3 class="text-xl font-semibold mb-4">BrainDataPortal</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">The brain omics data analysis and visualization platform:scRNAseq, scATACseq, ChIPseq, Spatial Transcriptomics, WGS and other omics data.</p>
-                <div class="flex flex-wrap justify-center gap-2 mb-4 text-center items-center">
-                    <div class="text-sm text-blue-400">#React</div>
-                    <div class="text-sm text-blue-400">#Vite</div>
-                    <div class="text-sm text-blue-400">#FastAPI</div>
-                    <div class="text-sm text-blue-400">#PostgreSQL</div>
-                </div>
-                <a href="https://github.com/huruifeng/BrainDataPortal" class="inline-flex items-center hover:text-blue-400 transition-colors ml-4">
-                    View Codes →
-                </a>
             </div>
 
             <div class="bg-white dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
@@ -543,9 +548,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    <div class="max-w-8xl mx-auto px-4 text-center mt-20">
+    <div class="max-w-7xl mx-auto px-4 text-center mt-20">
         <div class="inline-flex flex-col space-y-4 w-full max-w-6xl">
-            <!-- JSON Resume Button -->
             <a href="https://github.com/huruifeng" 
                target="_blank"
                class="w-full py-3 px-6 bg-gray-500 text-white  font-medium text-center
@@ -559,7 +563,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- Experience Section -->
 <section id="experience" class="py-16 bg-gray-50 dark:bg-gray-900">
-    <div class="flex flex-col max-w-6xl mx-auto items-center">
+    <div class="flex flex-col max-w-7xl mx-auto items-center">
         <div class="text-center mb-12 items-center">
             <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 section_title_font">My Work Experience</h2>
             <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->
@@ -682,7 +686,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <section id="education" class="py-16 bg-white dark:bg-gray-900">
-    <div class="flex flex-col mx-auto max-w-6xl px-4 items-center">
+    <div class="flex flex-col mx-auto max-w-7xl px-4 items-center">
         <div class="text-center mb-12 items-center">
             <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 section_title_font">My Education</h2>
             <!-- <div class="w-24 h-px bg-gray-300 dark:bg-gray-600 mb-6"></div> -->

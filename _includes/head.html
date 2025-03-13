@@ -2,7 +2,7 @@
 <!-- basic page needs  -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{{ site.brand }} - {{ site.title }}</title>
+<title>{{ site.brand }} - {{ page.title }}</title>
 {% if site.meta_author %}
 <meta name="author" content="{{ site.meta_author }}">
 {% endif %}
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll handler
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
+            // e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             const targetPosition = targetSection.offsetTop - navbarHeight;
